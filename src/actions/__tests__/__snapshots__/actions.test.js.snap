@@ -1,5 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Actions for Fetch Fetch creates a FETCH action 1`] = `
+Array [
+  Object {
+    "payload": Promise {
+      "_40": 0,
+      "_55": Promise {
+        "_40": 0,
+        "_55": null,
+        "_65": 0,
+        "_72": null,
+      },
+      "_65": 3,
+      "_72": null,
+    },
+    "type": "FETCH",
+  },
+]
+`;
+
 exports[`Actions for Fetch Fetch creates a FETCH_FAILURE action 1`] = `
 Array [
   Object {
@@ -29,6 +48,14 @@ Array [
       ],
     },
     "type": "FETCH_SUCCESS",
+  },
+]
+`;
+
+exports[`Actions for Fetch Fetch creates a RESET_FETCH action 1`] = `
+Array [
+  Object {
+    "type": "RESET_FETCH",
   },
 ]
 `;

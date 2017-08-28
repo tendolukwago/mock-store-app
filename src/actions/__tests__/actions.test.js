@@ -6,16 +6,20 @@ import nock from 'nock';
 //local imports
 import * as actions from '../index';
 
-const initialState = {}; 
+const baseUrl = 'http://localhost:8080';
 
-const middlewares = [thunk];    
+const middlewares = [thunk]; 
 const mockStore = configureStore(middlewares);
-const token = "token";  
 
 describe('Actions for Fetch', () => {
 
+    const initialState = {};       
+    const token = "token";  
+    const store = mockStore(initialState);
+
     beforeEach(() => {
-        mockStore.clearActions();
+
+        store.clearActions();
     });
 
 
@@ -24,9 +28,9 @@ describe('Actions for Fetch', () => {
         it('creates a FETCH action', async () => {
 
             //arrage
-            const store = mockStore(initialState);
+
             //act
-            nock(BASE_URL)
+            nock(baseUrl)
             .get('/api/test')
             .reply(200);
 
@@ -38,7 +42,7 @@ describe('Actions for Fetch', () => {
         });
         it('creates a FETCH_SUCCESS action', () => {
             //arrange
-            const store = mockStore(initialState);
+ 
             const res = {data: [
                 {
                     id:"1",
@@ -70,7 +74,7 @@ describe('Actions for Fetch', () => {
         });
         it('creates a RESET_FETCH action', () => {
             //arrage
-            const store = mockStore(initialState);
+
 
             //act
             store.dispatch(actions.resetFetch());

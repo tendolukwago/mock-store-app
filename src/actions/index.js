@@ -34,9 +34,9 @@ export function fetch(tokenFromStorage) {
     };
   }
   
-  export function resetPosts() {
+  export function resetFetch() {
     return {
-      type: types.RESET
+      type: types.RESET_FETCH
     };
   }
   
