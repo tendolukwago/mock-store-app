@@ -20,23 +20,24 @@
 		"babel-preset-react-native": "2.0.1",
 		"enzyme": "^2.9.1",
 		"jest": "20.0.4",
-		"react-test-renderer": "16.0.0-alpha.12"
+		"react-test-renderer": "16.0.0-alpha.12",
+		"redux-mock-store": "^1.2.3"
 	},
 	"jest": {
 		"preset": "react-native",
 		"setupFiles": [
-		  "./src/config/tests.js"
+			"./src/config/tests.js"
 		],
 		"testMatch": [
-		  "**/__tests__/**/*.js",
-		  "**/?(*.)(spec|test).js?(x)"
+			"**/__tests__/**/*.js",
+			"**/?(*.)(spec|test).js?(x)"
 		],
 		"testPathIgnorePatterns": [
-		  "/node_modules/",
-		  "./config/tests.js"
+			"/node_modules/",
+			"./config/tests.js"
 		],
 		"transformIgnorePatterns": [
-		  "/node_modules/(?!react-native|react-navigation)/"
+			"/node_modules/(?!react-native|react-navigation)/"
 		]
-	  }
+	}
 }
